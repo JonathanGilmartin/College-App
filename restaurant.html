@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+	<link rel="stylesheet" type="text/css" href="ionic/js/ionic.bundle.js">
+	<link rel="stylesheet" type="text/css" href="ionic/css/ionic.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+   <link rel="stylesheet" type="text/css" href="css/reset.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<header>
+<img src="images/logo_1.png" alt="Glasses">
+</header>
+
+<body>
+
+        
+		
+	<div class="info">
+		<ul>
+			<li>Restaurant Name:Brookwood Dublin</li>
+			<li>Address:141 Baggot Street Lower</li>
+			<li>Rating:4.3</li>
+				
+
+
+		</ul>
+	
+	<div id="map"></div>
+	
+	
+	
+	
+	<button class="button button-balanced share-fav">Share</button>
+	 <button class="button button-balanced share-fav">Add to Favourites</button>
+	 
+	</div>
+
+	<script>
+      function initMap() {
+        var dublin = {lat: 53.3498053, lng: -6.260309699999993};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: dublin
+        });
+        var marker = new google.maps.Marker({
+          position: dublin,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQmWUz-yb0fB8rynx9U5r2HvyIEPG1YR8&callback=initMap">
+    </script>
+</body>
+<footer> 
+
+<a href="main.html"><i class="fa fa-home fa-5x"></i></a>
+<i class="fa fa-comment fa-5x" aria-hidden="true"></i>
+<i class="fa fa-star fa-5x" aria-hidden="true"></i>
+<i class="fa fa-users fa-5x" aria-hidden="true"></i>
+</footer>
+</html>

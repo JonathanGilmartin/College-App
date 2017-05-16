@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		
+		<script src="ionic/js/ionic.bundle.js"></script>
+	
+		<script src="js/mainController.js"></script>
+	
+		<link rel="stylesheet" type="text/css" href="ionic/css/ionic.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+</head>
+
+<header>
+<img class ="head_image" src="images/logo_1.png" alt="Glasses">
+</header>
+
+
+<body ng-app="restaurantApp">
+	<ion-content>
+       <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper textbox-search">
+                <i class="icon ion-ios7-search placeholder-icon"></i>
+                <input type="search" placeholder="Search">
+            </label>
+
+        </div>
+
+
+ <h2 class="heading">Most Popular</h2>
+	
+<div class="card">
+
+	<div class="item item-text-wrap" ng-controller ="mainController">
+	<img src="images/brookwood.png" class="restaurant_image">
+		<ul>
+			<li class="name" ng-repeat ="name in brookwood" ng-style="text">{{name}}</li>
+		</ul>
+		<a href="restaurant.html"><button class="rest_button">View Details</button></a>
+	</div>
+</div>
+
+<div class="card">
+
+	<div class="item item-text-wrap" ng-controller ="mainController">
+	<img src="images/red_torch.png" class="restaurant_image">
+		<ul>
+			<li class="name" ng-repeat ="name in red" ng-style="text">{{name}}</li>
+		</ul>
+		<button class=" button-balanced rest_button">View Details</button>
+	</div>
+</div>
+
+ <div class="card">
+	<div class="item item-text-wrap" ng-controller ="mainController">
+	<img src="images/jimmy-chungs.png" class="restaurant_image">
+		<ul>
+			<li class="name" ng-repeat ="name in jimmy" ng-style="text">{{name}}</li>
+		</ul>
+		<button class=" button-balanced rest_button">View Details</button>
+  </div>
+</div>
+	
+	<div class="near_location">
+	
+	
+	<h2 class="heading">Near your location</h2>
+	
+	
+<div class="card">
+		<div class="item item-text-wrap" ng-controller ="mainController">
+		<img src="images/fire-restaurant.png" class="restaurant_image">
+			<ul>
+				<li class="name" ng-repeat ="name in fire" ng-style="text">{{name}}</li>
+			</ul>
+			<button class=" button-balanced rest_button">View Details</button>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="item item-text-wrap" ng-controller ="mainController">
+		<img src="images/las-tapas-de-lola.png" class="restaurant_image">
+			<ul>
+				<li class="name" ng-repeat ="name in tapas" ng-style="text">{{name}}</li>
+			</ul>
+			<button class=" button-balanced rest_button">View Details</button>
+		</div>
+	</div>
+</div>	
+
+</div>
+</ion-content>
+</body>
+
+<footer class="foot"> 
+
+<a href="main.html"><i class="fa fa-home fa-5x"></i></a>
+<i class="fa fa-comment fa-5x" aria-hidden="true"></i>
+<i class="fa fa-star fa-5x" aria-hidden="true"></i>
+<i class="fa fa-users fa-5x" aria-hidden="true"></i>
+</footer>
+</html>
